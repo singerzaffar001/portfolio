@@ -91,6 +91,13 @@ body {
     overflow: hidden;
     margin-top: 0;
 }
+.hero {
+    background-size: cover; /* Ensures the image covers the entire section */
+    background-position: center center; /* Keeps the image centered */
+    background-attachment: fixed; /* Keeps the image fixed when scrolling (optional) */
+    height: 100vh; /* Ensures the section takes up the full viewport height */
+    width: 100%; /* Ensures the section takes up the full width of the page */
+}
 
 .hero::before {
     content: '';
@@ -185,156 +192,224 @@ section h2::after {
 }
 
 /* About Section */
+.about {
+    background: var(--white);
+    position: relative;
+    overflow: hidden;
+}
+
+.about::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(44, 62, 80, 0.05), rgba(52, 152, 219, 0.05));
+    z-index: 0;
+}
+
 .about-content {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 4rem;
     max-width: 1200px;
     margin: 0 auto;
+    position: relative;
+    z-index: 1;
 }
 
 .about-text {
-    font-size: 1.1rem;
-    line-height: 1.8;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
 }
 
-.skills ul {
+.about-intro {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: var(--text-color);
+}
+
+.about-achievements {
+    margin-top: 2rem;
+}
+
+.about-achievements h3 {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.about-achievements ul {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
-    margin-top: 1rem;
+    gap: 2rem;
+    list-style: none;
 }
 
-.skills li {
+.about-achievements li {
     background: var(--white);
-    padding: 1rem;
-    border-radius: 10px;
+    padding: 2rem;
+    border-radius: 15px;
     box-shadow: var(--shadow);
     transition: all 0.3s ease;
+    text-align: center;
+    border-bottom: 4px solid var(--accent-color);
 }
 
-.skills li:hover {
-    transform: translateY(-3px);
+.about-achievements li:hover {
+    transform: translateY(-5px);
     box-shadow: var(--shadow-hover);
+}
+
+.achievement-number {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.achievement-text {
+    font-size: 1.1rem;
+    color: var(--text-color);
+}
+
+.expertise {
+    margin-top: 2rem;
+}
+
+.expertise h3 {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.expertise-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.expertise-item {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.expertise-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+
+.expertise-item i {
+    font-size: 2rem;
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+}
+
+.expertise-item h4 {
+    font-size: 1.3rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.expertise-item p {
+    font-size: 1rem;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.about-image {
+    position: relative;
 }
 
 .about-image img {
     width: 100%;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
-
-/* Music Section */
-.music-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.music-item {
-    background: var(--white);
-    border-radius: 15px;
-    overflow: hidden;
+    border-radius: 20px;
     box-shadow: var(--shadow);
     transition: all 0.3s ease;
 }
 
-.music-item:hover {
-    transform: translateY(-5px);
+.about-image:hover img {
+    transform: scale(1.02);
     box-shadow: var(--shadow-hover);
 }
 
-.music-cover {
-    position: relative;
-    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
-    height: 0;
-    overflow: hidden;
-}
-
-.music-cover img,
-.music-cover iframe {
+.image-caption {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border: none;
-}
-
-.play-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    transition: all 0.3s ease;
-}
-
-.music-item:hover .play-overlay {
-    opacity: 1;
-}
-
-.play-overlay i {
-    color: var(--white);
-    font-size: 3rem;
-}
-
-.music-item a {
-    text-decoration: none;
-    color: inherit;
-    display: block;
-    transition: all 0.3s ease;
-}
-
-.music-item a:hover {
-    transform: translateY(-5px);
-}
-
-.music-item a:hover .music-cover {
-    box-shadow: var(--shadow-hover);
-}
-
-/* Video Grid */
-.video-grid, .reels-grid, .spotify-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    max-width: 1200px;
-    margin: 0 auto 2rem;
-}
-
-.video-item, .reel-item, .spotify-item {
-    position: relative;
-    padding-bottom: 56.25%;
-    height: 0;
-    overflow: hidden;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 0.95);
+    padding: 1.5rem;
     border-radius: 15px;
     box-shadow: var(--shadow);
-    transition: all 0.3s ease;
-    background: var(--white);
+    text-align: center;
+    width: 90%;
 }
 
-.video-item:hover, .reel-item:hover, .spotify-item:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-hover);
+.image-caption p {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
 }
 
-.video-item iframe, .reel-item iframe, .spotify-item iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: none;
-    border-radius: 15px;
+.image-caption span {
+    color: var(--text-color);
+    font-size: 1rem;
+}
+
+@media screen and (max-width: 1024px) {
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        padding: 0 1rem;
+    }
+
+    .expertise-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-achievements ul {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .about {
+        padding: 4rem 1rem;
+    }
+
+    .about-intro {
+        font-size: 1.1rem;
+    }
+
+    .achievement-number {
+        font-size: 2rem;
+    }
+
+    .achievement-text {
+        font-size: 1rem;
+    }
+
+    .expertise-item {
+        padding: 1.5rem;
+    }
+
+    .image-caption {
+        position: relative;
+        bottom: 0;
+        margin-top: 1rem;
+        transform: none;
+        left: 0;
+        width: 100%;
+    }
 }
 
 /* Contact Section */
@@ -544,16 +619,6 @@ footer {
 
     .skills ul {
         grid-template-columns: 1fr;
-    }
-
-    /* Music Section */
-    .music-grid {
-        grid-template-columns: 1fr;
-        padding: 0 1rem;
-    }
-
-    .music-item {
-        margin-bottom: 2rem;
     }
 
     /* Gallery Section */

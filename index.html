@@ -3,14 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shah Zaffar - The Voice of Kashmir</title>
+    <meta name="description" content="Shah Zaffar - The Voice of Kashmir. Professional singer and performer specializing in Sufi, Kashmiri folk, and Indian classical music.">
+    <meta name="keywords" content="Shah Zaffar, Kashmiri singer, Sufi music, Indian classical music, Kashmiri folk music, live performance">
+    <title>Zaffar Ki Mehfil - The Voice of Kashmir</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar">
-        <div class="logo">Shah Zaffar</div>
+        <div class="logo">Zaffar Ki Mehfil</div>
         <ul class="nav-links">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
@@ -26,7 +31,7 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="hero">
+    <section id="home" class="hero" style="background-image: url('IMG_1028.jpg');">
         <div class="hero-content">
             <h1>Shah Zaffar</h1>
             <p class="tagline">The Voice of Kashmir</p>
@@ -42,50 +47,65 @@
         <h2>About Me</h2>
         <div class="about-content">
             <div class="about-text">
-                <p>A soulful blend of Sufi mysticism, Kashmiri folk, and Indian classical music, Shah Zaffar is a celebrated singer and performer from the mesmerizing Valley of Kashmir. With an unparalleled passion for music, he has enthralled audiences across India, delivering over 600 electrifying performances that transcend boundaries and touch hearts.</p>
-                <div class="skills">
-                    <h3>Expertise</h3>
+                <div class="about-intro">
+                    <p>A soulful blend of Sufi mysticism, Kashmiri folk, and Indian classical music, Shah Zaffar is a celebrated singer and performer from the mesmerizing Valley of Kashmir. With an unparalleled passion for music, he has enthralled audiences across India, delivering over 600 electrifying performances that transcend boundaries and touch hearts.</p>
+                </div>
+                
+                <div class="about-achievements">
+                    <h3>Achievements</h3>
                     <ul>
-                        <li>Indian Classical Music</li>
-                        <li>Kashmiri Folk Music</li>
-                        <li>Sufi Music</li>
-                        <li>Live Performance</li>
-                        <li>Music Direction</li>
-                        <li>Ensemble Leadership</li>
+                        <li>
+                            <span class="achievement-number">300+</span>
+                            <span class="achievement-text">Live Performances</span>
+                        </li>
+                        <li>
+                            <span class="achievement-number">8+</span>
+                            <span class="achievement-text">Years of Experience</span>
+                        </li>
+                        <li>
+                            <span class="achievement-number">30K+</span>
+                            <span class="achievement-text">All Over Social Media Following</span>
+                        </li>
                     </ul>
+                </div>
+
+                <div class="expertise">
+                    <h3>Musical Expertise</h3>
+                    <div class="expertise-grid">
+                        <div class="expertise-item">
+                            <i class="fas fa-music"></i>
+                            <h4>Indian Classical</h4>
+                            <p>Trained in traditional Indian classical music with expertise in various ragas</p>
+                        </div>
+                        <div class="expertise-item">
+                            <i class="fas fa-drum"></i>
+                            <h4>Kashmiri Folk</h4>
+                            <p>Preserving and promoting the rich cultural heritage of Kashmir through folk music</p>
+                        </div>
+                        <div class="expertise-item">
+                            <i class="fas fa-heart"></i>
+                            <h4>Sufi Music</h4>
+                            <p>Specializing in soul-stirring Sufi compositions and mystical poetry</p>
+                        </div>
+                        <div class="expertise-item">
+                            <i class="fas fa-film"></i>
+                            <h4>Bollywood</h4>
+                            <p>Performing popular Bollywood songs and modern Indian film music</p>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="about-image">
-                <img src="placeholder-profile.jpg" alt="Shah Zaffar">
+               <div class="about-caption">
+                    <p>"Music is not what I do, it's who I am"</p>
+                    <span>- Shah Zaffar</span>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Music Section -->
     <section id="music" class="music">
-        <h2>My Music</h2>
-        <div class="music-grid">
-            <div class="music-item">
-                <div class="music-cover">
-                    <img src="placeholder-album.jpg" alt="Aman Ka Ashiyan">
-                    <div class="play-overlay">
-                        <i class="fas fa-play"></i>
-                    </div>
-                </div>
-                <h3>Aman Ka Ashiyan</h3>
-                <p>Collaboration with Indian Army</p>
-            </div>
-            <div class="music-item">
-                <div class="music-cover">
-                    <img src="placeholder-album.jpg" alt="Jo Dooba So Paar">
-                    <div class="play-overlay">
-                        <i class="fas fa-play"></i>
-                    </div>
-                </div>
-                <h3>Jo Dooba So Paar</h3>
-                <p>Featured in Kaushaljis vs Kaushal</p>
-            </div>
-        </div>
 
         <!-- Spotify Section -->
         <div class="spotify-section">
@@ -142,11 +162,9 @@
 
     <!-- Performance Gallery Section -->
     <section id="gallery">
-        <h2>Performance Gallery</h2>
-        
+        <h2>Performance Gallery</h2>  
         <!-- YouTube Videos Section -->
         <div class="gallery-section">
-            <h3>YouTube Performances</h3>
             <div class="video-grid">
                 <div class="video-item">
                     <iframe 
@@ -175,6 +193,20 @@
                         allowfullscreen>
                     </iframe>
                 </div>
+                <div class="video-item">
+                    <iframe 
+                        src="https://www.youtube.com/embed/XPWUW66r0L4" 
+                        title="Shah Zaffar Performance"
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+
+
+
+
+                
             </div>
             <div class="youtube-channel">
                 <a href="https://www.youtube.com/@shahzaffar8692" class="btn primary" target="_blank">
@@ -211,6 +243,31 @@
                         allowtransparency="true">
                     </iframe>
                 </div>
+                <div class="reel-item">
+                    <iframe 
+                        src="https://www.instagram.com/reel/C0imLuGvZs4/embed" 
+                        frameborder="0" 
+                        scrolling="no" 
+                        allowtransparency="true">
+                    </iframe>
+                </div>
+                <div class="reel-item">
+                    <iframe 
+                        src="https://www.instagram.com/reel/C1jda1kP4YH/embed" 
+                        frameborder="0" 
+                        scrolling="no" 
+                        allowtransparency="true">
+                    </iframe>
+                </div>
+                <div class="reel-item">
+                    <iframe 
+                        src="https://www.instagram.com/reel/C5vBXL2P0aP/embed" 
+                        
+                        frameborder="0" 
+                        scrolling="no" 
+                        allowtransparency="true">
+                    </iframe>
+                </div> 
             </div>
         </div>
     </section>
@@ -232,7 +289,7 @@
                 </div>
                 <div class="contact-item">
                     <i class="fas fa-map-marker-alt"></i>
-                    <p>Kashmir Valley, India</p>
+                    <p>Mumbai Maharashtra, India</p>
                 </div>
             </div>
             <div class="social-links">
@@ -248,16 +305,14 @@
                 <a class="social-link whatsapp" href="https://wa.me/916005610154" target="_blank" rel="noopener noreferrer">
                     <i class="fab fa-whatsapp"></i>
                 </a>
-                <a class="social-link facebook" href="#" target="_blank" rel="noopener noreferrer">
-                    <i class="fab fa-facebook"></i>
-                </a>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Shah Zaffar - The Voice of Kashmir. All rights reserved.</p>
+        <p>&copy; 2024 Shah Zaffar. All rights reserved.</p>
+        <p>Designed with <i class="fas fa-heart"></i> for music lovers</p>
     </footer>
 
     <script src="script.js"></script>
