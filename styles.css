@@ -91,69 +91,13 @@ body {
     overflow: hidden;
     margin-top: 0;
 }
- .hero {
-        background-size: cover; /* Ensure the background covers the entire section */
-        background-position: center center; /* Center the background image */
-        background-attachment: fixed; /* Optional: create parallax effect */
-        height: 100vh; /* Full viewport height */
-        width: 100%; /* Full width */
-        position: relative;
-    }
-
-    /* Content inside the hero section */
-    .hero-content {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-        color: white;
-    }
-
-    .cta-buttons {
-        margin-top: 20px;
-    }
-
-    /* Mobile responsiveness */
-    @media (max-width: 767px) {
-        .hero {
-            background-attachment: scroll; /* Disable fixed background on mobile */
-            height: 70vh; /* Adjust height for smaller screens */
-        }
-
-        .hero-content h1 {
-            font-size: 2.5rem; /* Adjust heading size for smaller screens */
-        }
-
-        .hero-content p {
-            font-size: 1.2rem; /* Adjust tagline size */
-        }
-
-        .cta-buttons a {
-            font-size: 0.9rem; /* Adjust button size */
-            padding: 10px 20px; /* Adjust padding */
-        }
-    }
-
-    /* Large screen responsiveness */
-    @media (min-width: 768px) {
-        .hero {
-            height: 100vh; /* Keep the height 100vh for larger screens */
-        }
-
-        .hero-content h1 {
-            font-size: 3.5rem; /* Larger heading for larger screens */
-        }
-
-        .hero-content p {
-            font-size: 1.5rem; /* Larger tagline */
-        }
-
-        .cta-buttons a {
-            font-size: 1rem; /* Adjust button size for desktop */
-            padding: 15px 30px; /* Padding for desktop */
-        }
-    }
+.hero {
+    background-size: cover; /* Ensures the image covers the entire section */
+    background-position: center center; /* Keeps the image centered */
+    background-attachment: fixed; /* Keeps the image fixed when scrolling (optional) */
+    height: 100vh; /* Ensures the section takes up the full viewport height */
+    width: 100%; /* Ensures the section takes up the full width of the page */
+}
 
 .hero::before {
     content: '';
